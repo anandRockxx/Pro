@@ -15,7 +15,7 @@ gulp.task('browserSync',function(){
 	browserSync.init({
           server: {
           	baseDir: './app'
-          }    
+          }
 	});
 });
 
@@ -73,9 +73,9 @@ gulp.task('imagemin', () =>
 
 
 // autoprefix css
-gulp.task('default', () =>
+gulp.task('prefixer', () =>
     gulp.src('app/assets/css/main/style.css')
-        .pipe(plumber())  
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(autoprefixer())
         .pipe(concat('all.css'))
